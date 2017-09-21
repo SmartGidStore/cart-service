@@ -7,6 +7,7 @@ using System.Web.Routing;
 using System.Web.Security;
 using System.Web.SessionState;
 using System.Web.Http;
+using CartWeb.App_Start;
 
 namespace CartWeb
 {
@@ -17,7 +18,13 @@ namespace CartWeb
             // Code that runs on application startup
             AreaRegistration.RegisterAllAreas();
             GlobalConfiguration.Configure(WebApiConfig.Register);
-            RouteConfig.RegisterRoutes(RouteTable.Routes);            
+            RouteConfig.RegisterRoutes(RouteTable.Routes);
+
+            //AreaRegistration.RegisterAllAreas();
+            ////WebApiConfig.Register(GlobalConfiguration.Configuration);
+            //
+            //FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
+            //RouteConfig.RegisterRoutes(RouteTable.Routes);
         }
     }
 }
